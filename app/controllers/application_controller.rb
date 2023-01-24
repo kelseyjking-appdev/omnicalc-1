@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   end
 
   def calculate_square
-    @num = params.fetch("elephant").to_i
+    @num = params.fetch("elephant").to_f
     @square_of_num = @num ** 2
   render({ :template => "calculation_templates/square_results.html.erb"})
   end
